@@ -1,5 +1,3 @@
-# Extensible Multi-Layer Cache System
-
 ## Overview
 
 This project provides an extensible caching system that integrates multiple caching mechanisms, including:
@@ -13,12 +11,11 @@ The system is designed to optimize data retrieval and storage, especially for ex
 
 ## Features
 
-1. **Unified Cache Management**: Combines memory, disk, and Redis caching layers into a single, user-friendly interface.
+1. **Unified Cache Management**: Combines memory and disk  caching layers into a single, user-friendly interface.
 2. **Layered Caching**:
    - Checks memory first (fastest).
-   - Falls back to Redis (distributed).
-   - Finally checks disk (persistent storage).
-3. **Extensibility**: Easily add new caching layers by implementing the `CacheBase` interface.
+   - Checks disk (persistent storage).
+3. **Extensibility**: Easily add new caching layers by implementing the `CacheBase` interface. can be extented to redis, other databases
 4. **Efficient Data Retrieval**:
    - Promotes frequently accessed data to faster layers (e.g., memory).
 5. **TTL Support**: Automatically expires stale cache entries.
